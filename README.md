@@ -38,6 +38,33 @@ Key Idea: Leverage the sorted order to find the pair in O(n) time with O(1) spac
 - **Sum < Target:** Move left right (left++)
 - **Sum > Target:** Move right left (right--)
 - **Sum == Target:** Return [left+1, right+1] (1-based indices).
+---
+
+---
+
+## Problem 2: 3Sum Closest
+🚀 Problem: [LeetCode 16](https://leetcode.com/problems/3sum-closest/description/)
+
+### Problem Statement
+Given an array of integers `nums` and a target integer, find three integers in `nums` whose sum is closest to the target. Return their sum.
+ 
+### Solution: Two Pointers Approach
+
+#### Steps:
+**1. Sort the array** to enable efficient two-pointer traversal
+
+**2. Initialize `closest` sum** with the first triplet (nums[0] + nums[1] + nums[2])
+
+**3. For each index i (0 to n-3):**
+   - **Initialize two pointers:** `left = i+1` and `right = n-1` (at the end)
+   - While `left < right`:
+     - Calculate current sum = `nums[i] + nums[left] + nums[right]`
+     - Update `closest` if current sum is nearer to target
+     - If exact match found (`sum == target`), return immediately
+     - If sum < target: move `left` forward (to increase sum)
+     - If sum > target: move `right` backward (to decrease sum)
+     
+**4. Return the `closest` sum found**
 
 
 ---
