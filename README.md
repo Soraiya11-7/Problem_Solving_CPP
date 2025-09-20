@@ -1,6 +1,15 @@
 
 # Problem Solving (C++)
 
+## Detecting Duplicates in Arrays: Hashing Patterns in Action
+
+
+## Problem 1: Remove Duplicates
+🚀 Problem: [Codeforces#978A](https://codeforces.com/problemset/problem/978/A)
+
+---
+
+
 ## Two Pointers
 
 An algorithmic approach using two indices that traverse a data structure (like an array) in coordination. Common patterns include:
@@ -65,6 +74,49 @@ Given an array of integers `nums` and a target integer, find three integers in `
      - If sum > target: move `right` backward (to decrease sum)
      
 **4. Return the `closest` sum found**
+
+
+---
+
+---
+
+## Problem 3: 3Sum 
+🚀 Problem: [LeetCode #15](https://leetcode.com/problems/3sum/)
+
+### Problem Statement
+ Given an integer array nums, find all unique triplets [nums[i], nums[j], nums[k]] where:
+
+- The triplet elements are distinct (i != j, i != k, j != k).
+- Their sum equals zero (nums[i] + nums[j] + nums[k] = 0).
+ 
+### Solution: Two Pointers Approach
+
+#### Steps:
+**1. Initial Setup**
+   - Sort the input array in ascending order
+   - Initialize an empty result vector to store triplets
+
+**2. Main Loop (i iterator)**
+   - Iterate through each element using index `i` (0 to n-1):
+     - Skip duplicate elements: `if (i > 0 && nums[i] == nums[i-1]) continue`
+     - Initialize two pointers:
+       - `left = i + 1`
+       - `right = nums.size() - 1`
+     - Calculate target sum: `target = -nums[i]`
+
+**3. Two-Pointer Search**
+   - While `left < right`:
+     - Calculate `current_sum = nums[left] + nums[right]`
+     - **Case 1: Match Found** `current_sum == target`:
+         - Add triplet to results: `result.push_back({nums[i], nums[left], nums[right]})`
+         - Skip duplicates:
+           - `while (left < right && nums[left] == nums[left+1]) left++`
+           - `while (left < right && nums[right] == nums[right-1]) right--`
+         - Move pointers: `left++`, `right--`
+     - **Case 2: Sum Too Small**
+       - When `current_sum < target`: `left++`
+     - **Case 3: Sum Too Large**
+       - When `current_sum > target`: `right--`
 
 
 ---

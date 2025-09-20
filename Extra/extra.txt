@@ -1,0 +1,32 @@
+//.....div a/b ceil val...............
+// int ceil_Val(int a, int b){
+//   return(a + b - 1) / b;
+// }
+
+//.........sum of ll num..........
+// ll getSum(ll n){
+//   ll sum = n*(n+1) / 2;
+//   return sum;
+// }
+
+// ......test case.......
+// ll t;
+// int n;
+// cin>>t;
+
+// while(t--){
+//     cin>>n;
+//     cout<<n;
+// }
+
+
+// #include <bits/stdc++.h>
+// using namespace std;
+ 
+// #define ll                       long long
+// #define nl                       cout<<"\n";
+// #define YES                      cout<<"YES";
+// #define NO                       cout<<"NO";
+// #define pb                       push_back
+// #define gcd(x,y)                 __gcd(x,y)
+// #define lcm(x,y)                 ( x / __gcd(x,y) ) * y
