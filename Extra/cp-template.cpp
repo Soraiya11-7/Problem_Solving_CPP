@@ -27,6 +27,8 @@ using namespace std;
 #define vll                      vector<long long> 
 #define vstr                     vector<string>
 #define vi                       vector<int>
+#define vpii                     vector<pii>
+#define vpll                     vector<pll>
 #define all(v)                   v.begin(),v.end()
 #define rall(v)                  v.rbegin(),v.rend()
 #define max_ele(v)               *max_element(all(v))
@@ -52,6 +54,20 @@ int ceil_Val(int a, int b){
    return(a + b - 1) / b;
 }
 
+// (x1, y1) > (x2, y2) iff (x1 > x2) or (x1 == x2 and y1 < y2) 
+// bool check(const pii &q1, const pii &q2){
+//     if(q1.ff == q2.ff ){
+//         return q2.ss > q1.ss;
+//     }
+//     else  return q1.ff > q2.ff;
+// }
+
+// sort(all(v), check);
+
+int ceil_Val(int a, int b){
+   return(a + b - 1) / b;
+}
+
 ll getSum(ll n){
   ll sum = n*(n+1) / 2;
   return sum;
@@ -71,6 +87,14 @@ ll getSumOfCubes(ll n){
 
 int main(){
     fastio;
+    
+    // int t;
+    // cin>>t;
+    
+    // while(t--){
+    //     int n;
+    //     cin>>n;
+    // }
     
     return 0;
 }
